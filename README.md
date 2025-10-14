@@ -3,6 +3,7 @@
 **Autora:** Yasmin de Oliveira e Silva
 **Curso:** Inteligência Artificial
 **Data:** Outubro / 2025
+**Repositório GitHub:** [https://github.com/deoliveiras-yasmin/fiap-fase2-agrotech] (https://github.com/deoliveiras-yasmin/fiap-fase2-agrotech)
 
 ---
 
