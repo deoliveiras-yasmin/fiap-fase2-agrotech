@@ -1,0 +1,28 @@
+=== Relatorio Comparativo de Colheita (Cana) ===
+
+Parametros de entrada:
+ Area (ha): 10.0
+ Produtividade (ton/ha): 50.0
+ Preco (R$/ton): 20.0
+ Janela ideal (dias): 7
+
+--- Metodo: MANUAL ---
+ Duracao (dias): 3.33
+ Perda total (%): 5.0%
+ Perda (ton): 25.0
+ Producao liquida (ton): 475.0
+ Custo total (R$): 2666.67
+ Lucro (R$): 6833.33
+
+--- Metodo: MECANICA ---
+ Duracao (dias): 0.5
+ Perda total (%): 15.0%
+ Perda (ton): 75.0
+ Producao liquida (ton): 425.0
+ Custo total (R$): 1750.0
+ Lucro (R$): 6750.0
+
+--- Diferencas (mecanica - manual) ---
+ Diferenca de Lucro: R$ -83.33
+ Diferenca de Tempo (dias): -2.83
+ Diferenca de Perda (ton): 50.0

@@ -1,0 +1,41 @@
+[
+  {
+    "comparacao": {
+      "manual": {
+        "metodo": "manual",
+        "area_ha": 10.0,
+        "prod_ton_ha": 50.0,
+        "preco_ton": 20.0,
+        "duracao_dias": 3.33,
+        "perda_percent_total": 5.0,
+        "perda_ton": 25.0,
+        "producao_total_ton": 500.0,
+        "producao_liquida_ton": 475.0,
+        "receita_bruta": 9500.0,
+        "custo_total": 2666.67,
+        "lucro": 6833.33,
+        "atraso_dias": 0.0
+      },
+      "mecanica": {
+        "metodo": "mecanica",
+        "area_ha": 10.0,
+        "prod_ton_ha": 50.0,
+        "preco_ton": 20.0,
+        "duracao_dias": 0.5,
+        "perda_percent_total": 15.0,
+        "perda_ton": 75.0,
+        "producao_total_ton": 500.0,
+        "producao_liquida_ton": 425.0,
+        "receita_bruta": 8500.0,
+        "custo_total": 1750.0,
+        "lucro": 6750.0,
+        "atraso_dias": 0.0
+      },
+      "diferencas": {
+        "lucro_diff": -83.33,
+        "tempo_diff_dias": -2.83,
+        "perda_diff_ton": 50.0
+      }
+    }
+  }
+]

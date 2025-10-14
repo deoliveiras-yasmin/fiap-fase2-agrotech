@@ -1,72 +1,127 @@
-# FIAP - Faculdade de Informática e Administração Paulista
+# 🌾 Comparador de colheita de Cana (Agrotech)
+**Projeto da Fase 2 - FIAP: Agronegócio e Phython**
+**Autora:** Yasmin de Oliveira e Silva
+**Curso:** Inteligência Artificial
+**Data:** Outubro / 2025
 
-<p align="center">
-<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
-</p>
+---
 
-<br>
+## 🧭 Contexto
 
-# Nome do projeto
+O agronegócio brasileiro é um dos pilares da economia nacional, responsável por uma grande fatia do PIB e por milhões de empregos.  
+Dentro deste universo, o setor **sucroalcooleiro (cana-de-açúcar)** se destaca mundialmente, mas ainda enfrenta perdas significativas no processo de colheita.
 
-## Nome do grupo
+- A **colheita manual** apresenta **menores perdas** (≈5%), mas é lenta e de alto custo operacional.  
+- A **colheita mecanizada** é muito mais rápida, porém pode gerar **perdas de até 15%** da produção.
 
-## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+Este projeto propõe uma **solução Agrotech** que ajuda o produtor rural a comparar os dois métodos de colheita, estimando o impacto financeiro real — considerando o tempo, o custo e a penalidade por atraso.
 
-## 👩‍🏫 Professores:
-### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
-### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
+---
 
+## 💡 Solução e Inovação
 
-## 📜 Descrição
+O **Comparador de Colheita de Cana** simula de forma prática a produtividade, as perdas e o lucro líquido de cada método, permitindo uma análise comparativa clara e objetiva.
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+### 🔍 Funcionalidades Principais:
+- Cálculo de perdas (básicas e penalidades por atraso);
+- Comparação de lucro líquido, tempo de colheita e custos;
+- Armazenamento automático dos resultados em arquivos locais:
+  - `outputs/simulacoes_cana.json`
+  - `outputs/relatorio_simples.txt`
 
+### 🌱 Inovação:
+Além da comparação direta entre métodos, o projeto introduz o **fator tempo** como variável crítica.  
+Isso permite entender como **atrasos no ciclo de colheita** impactam o lucro final — uma visão mais realista e alinhada à dinâmica do campo moderno.
 
-## 📁 Estrutura de pastas
+---
 
-Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
+## 🧩 Estrutura Técnica
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+Toda a lógica foi construída em **Python 3**, aplicando os conceitos dos **Capítulos 3 a 6** da Fase 2 da disciplina.
 
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+| Capítulo | Conteúdo Didático | Aplicação no Projeto |
+|-----------|-------------------|----------------------|
+| 3 | Subalgoritmos (Funções e Procedimentos) | Funções como `calcular_resultados()` e `comparar_metodos()` |
+| 4 | Estruturas de Dados (Listas, Tuplas e Dicionários) | Uso de **tuplas** para constantes, **dicionários** para dados de simulação e **listas** para o histórico |
+| 5 | Manipulação de Arquivos (TXT e JSON) | Gravação de relatórios `.txt` e histórico `.json` |
+| 6 | Banco de Dados e Exceções | Simulação de conexão Oracle com `try/except` e validação de entrada de dados |
 
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+---
 
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
+### Pré-requisitos
+- **Python 3.x** instalado  
+- (Opcional) Biblioteca `cx_Oracle` para simulação de conexão com banco de dados
 
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
+### Instalação da dependência (opcional)
+```bash
+pip install cx_Oracle
+```
 
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+## 🏗️ Estrutura de pastas esperada:
+```bash
+comparador-de-colheita/
+├─ src/
+│  └─ comparador_de_colheita_de_cana.py
+├─ outputs/
+│  ├─ simulacoes_cana.json
+│  └─ relatorio_simples.txt
+└─ README.md
+```
 
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+## ▶️ Execução
 
-## 🔧 Como executar o código
+Na raiz do projeto, execute:
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+`python src/comparador_de_colheita_de_cana.py`
 
+Siga o menu interativo exibido no terminal para realizar as simulações.
 
-## 🗃 Histórico de lançamentos
+## 💾 Simulação de Conexão Oracle
 
-* 0.5.0 - XX/XX/2024
-    * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
+**Nota sobre Conexão Oracle (Simulação):**
+A conexão com banco de dados Oracle é apenas uma **simulação** implementada via blocos try/except.
+Por motivos de segurança e privacidade, não foram incluídas credenciais reais nem tentativas de conexão remota.
 
-## 📋 Licença
+Caso o avaliador deseje testar a conexão em ambiente controlado, basta instalar o driver `cx_Oracle` e atualizar a função `conectar_oracle()` com as credenciais e parâmetros do serviço.
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+Essa abordagem garante privacidade e segurança dos dados e demonstra domínio técnico do processo de conexão, mesmo sem acesso ao ambiente real.
 
+> **📊 Exemplo de Saída Simplificada**
+>
+>```bash
+> Método: Colheita Manual
+> Área: 100 ha | Produção Esperada: 9000 t
+> Tempo: 10 dias | Custo: R$ 50.000 | Perdas: 5%
+> Lucro Líquido: R$ 430.000
+>
+> Método: Colheita Mecânica
+> Área: 100 ha | Produção Esperada: 9000 t
+> Tempo: 3 dias | Custo: R$ 35.000 | Perdas: 15%
+> Lucro Líquido: R$ 400.000
+>
+> ✅ Resultado: A colheita manual gera maior lucro, mas demanda mais tempo.
+>```
 
+## 🧠 Conceitos Aplicados
+
+- Estruturas de dados complexas (listas, tuplas e dicionários)
+
+- Subalgoritmos com passagem de parâmetros
+
+- Manipulação eficiente de arquivos texto e JSON
+
+- Simulação de conexão com banco Oracle
+
+- Tratamento robusto de exceções e validação de entrada
+
+## 🤖 Observação Ética e Acadêmica
+
+Este projeto foi desenvolvido pela estudante **Yasmin de Oliveira e Silva**, com base nos conteúdos das apostilas da FIAP (Fase 2 – Capítulos 3 a 6).
+
+O desenvolvimento contou com o **apoio técnico** de assistentes de IA (ChatGPT e Gemini) para otimização e revisão de código, mas toda a lógica, estrutura e conceito Agrotech foram definidos pela autora, refletindo compreensão prática dos temas estudados.
+
+## 📜 Licença
+
+Projeto educacional - FIAP 2025
+
+> ⚠️ Projeto acadêmico de autoria de **Yasmin de Oliveira e Silva**, desenvolvido para a disciplina de Computational Thinking with Python (FIAP 2025). Uso e reprodução proibidos sem referência.
